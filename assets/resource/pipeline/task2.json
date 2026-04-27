@@ -1,0 +1,350 @@
+{
+    "$__mpe_config_新建Pipeline3": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": -505,
+                "y": 301,
+                "zoom": 1
+            },
+            "filename": "新建Pipeline3",
+            "version": "v1.4.2"
+        }
+    },
+    "开宝珠_确认在背包": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "背包铁匠铺图标.png"
+                ]
+            }
+        },
+        "next": [
+            "开宝珠_背包道具"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1194,
+                "y": 206
+            }
+        }
+    },
+    "开宝珠_背包道具": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "背包道具.png",
+                    "背包道具2.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开宝珠_点击宝珠",
+            "[JumpBack]开宝珠_背包道具"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1476,
+                "y": 205
+            }
+        }
+    },
+    "开宝珠_点击宝珠": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "道具_宝珠.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "next": [
+            "开宝珠_点击打开",
+            "[JumpBack]开宝珠_背包道具",
+            "开宝珠_勾选跳过动画"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1741,
+                "y": 195
+            }
+        }
+    },
+    "开宝珠_点击打开": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "道具打开.png"
+                ],
+                "threshold": [
+                    0.7
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开宝珠_勾选跳过动画",
+            "[JumpBack]开宝珠_点击宝珠"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2002,
+                "y": 213
+            }
+        }
+    },
+    "开宝珠_开启": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "宝珠开启按钮.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开宝珠_全部拾取"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2785,
+                "y": 211
+            }
+        }
+    },
+    "开宝珠_全部拾取": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "全部拾取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "repeat": 5,
+        "repeat_delay": 10000,
+        "next": [
+            "开宝珠_关闭",
+            "开宝珠_全部拾取"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3064,
+                "y": 196
+            }
+        }
+    },
+    "开宝珠_勾选跳过动画": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "跳过动画"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开宝珠_检查连续开启",
+            "开宝珠_开启"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2252,
+                "y": 223
+            }
+        }
+    },
+    "开宝珠_关闭": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "关闭按钮.png"
+                ],
+                "threshold": [
+                    0.85
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开宝珠_确认关闭",
+            "[JumpBack]开宝珠_关闭"
+        ],
+        "on_error": [
+            "合成宝珠_打开背包"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3340,
+                "y": 210
+            }
+        }
+    },
+    "开宝珠_确认关闭": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "放入背包"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开宝珠_关闭背包"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3609,
+                "y": 230
+            }
+        }
+    },
+    "开宝珠_关闭背包": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "关闭按钮.png"
+                ],
+                "threshold": [
+                    0.85
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "合成宝珠_打开背包",
+            "[JumpBack]开宝珠_关闭背包"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3885,
+                "y": 214
+            }
+        }
+    },
+    "开宝珠_检查连续开启": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "开宝珠_连续开启.png"
+                ],
+                "threshold": [
+                    0.8
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开宝珠_开启"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2520,
+                "y": 201
+            }
+        }
+    },
+    "$__mpe_external_合成宝珠_打开背包_新建Pipeline3": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4215,
+                "y": 261
+            }
+        }
+    },
+    "开宝珠_聚焦": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "图标_日常.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -200,
+                    0,
+                    -60,
+                    -60
+                ]
+            }
+        },
+        "next": [
+            "开宝珠_打开背包"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 632,
+                "y": 190
+            }
+        }
+    },
+    "开宝珠_打开背包": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    660,
+                    582,
+                    157,
+                    132
+                ],
+                "template": [
+                    "背包.png"
+                ],
+                "threshold": [
+                    0.4
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开宝珠_确认在背包",
+            "[JumpBack]开宝珠_打开背包"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 919,
+                "y": 181
+            }
+        }
+    }
+}
