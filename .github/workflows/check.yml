@@ -32,7 +32,7 @@ jobs:
 
       - name: Run maa-checker
         run: |
-          npm ci
+          npm install
           npx @nekosu/maa-tools check
 
       - name: Install maafw
