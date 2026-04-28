@@ -13,7 +13,7 @@
             "type": "Win32",
             "win32": {
                 "class_regex": ".*",
-                "window_regex": ".*Mio.*",
+                "window_regex": ".*",
                 "screencap": "FramePool",
                 "mouse": "PostMessageWithCursorPos",
                 "keyboard": "PostMessageWithCursorPos"
