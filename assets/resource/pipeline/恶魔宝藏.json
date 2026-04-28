@@ -1,0 +1,260 @@
+{
+    "$__mpe_config_恶魔宝藏": {
+        "$__mpe_code": {
+            "prefix": "",
+            "savedViewport": {
+                "x": -1444,
+                "y": 551,
+                "zoom": 0.76
+            },
+            "filename": "恶魔宝藏",
+            "version": "v1.4.3"
+        }
+    },
+    "恶魔宝藏_点击活动图标": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "恶魔宝藏活动图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    20,
+                    20,
+                    -10,
+                    -10
+                ]
+            }
+        },
+        "next": [
+            "恶魔宝藏_点击免费获取",
+            "恶魔宝藏_今日免费探险次数已用完"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2346,
+                "y": -104
+            }
+        }
+    },
+    "恶魔宝藏_点击免费获取": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "恶魔宝藏_免费获取.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "[JumpBack]恶魔宝藏_点击免费获取",
+            "恶魔宝藏_点击取消",
+            "恶魔宝藏_连续探险"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2609,
+                "y": -100
+            }
+        }
+    },
+    "恶魔宝藏_点击取消": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "取消"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    5,
+                    5,
+                    -3,
+                    -3
+                ]
+            }
+        },
+        "next": [
+            "恶魔宝藏_连续探险"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2891,
+                "y": 55
+            }
+        }
+    },
+    "恶魔宝藏_连续探险": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    568,
+                    461,
+                    178,
+                    164
+                ],
+                "expected": [
+                    "连续探险"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "恶魔宝藏_宝藏探险"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3184,
+                "y": -149
+            }
+        }
+    },
+    "恶魔宝藏_宝藏探险": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    568,
+                    461,
+                    178,
+                    164
+                ],
+                "template": [
+                    "恶魔宝藏_宝藏探险.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "恶魔宝藏_关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3447,
+                "y": -163
+            }
+        }
+    },
+    "恶魔宝藏_关闭": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "关闭按钮.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "恶魔宝藏_确认是否关闭",
+            "恶魔宝藏_结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3729,
+                "y": -157
+            }
+        }
+    },
+    "恶魔宝藏_确认是否关闭": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "关闭按钮.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "[JumpBack]恶魔宝藏_关闭",
+            "恶魔宝藏_结束"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3995,
+                "y": -160
+            }
+        }
+    },
+    "恶魔宝藏_结束": {
+        "$__mpe_code": {
+            "position": {
+                "x": 4041,
+                "y": 107
+            }
+        }
+    },
+    "恶魔宝藏_今日免费探险次数已用完": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "今日免费探险次数"
+                ]
+            }
+        },
+        "next": [
+            "恶魔宝藏_关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2612,
+                "y": 178
+            }
+        }
+    },
+    "恶魔宝藏_打开活动列表": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "活动图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    20,
+                    20,
+                    -10,
+                    -10
+                ]
+            }
+        },
+        "post_delay": 1000,
+        "next": [
+            "恶魔宝藏_点击活动图标",
+            "[JumpBack]恶魔宝藏_打开活动列表"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2063,
+                "y": -102
+            }
+        }
+    }
+}

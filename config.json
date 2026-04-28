@@ -1,0 +1,28 @@
+{
+  "file": {
+    "exclude": [
+      "node_modules",
+      ".git",
+      "dist",
+      "build"
+    ],
+    "extensions": [
+      ".json",
+      ".jsonc"
+    ]
+  },
+  "log": {
+    "dir": "C:\\Users\\Rin\\Desktop\\MaaPipelineExtremer-windows-amd64\\logs",
+    "level": "INFO",
+    "push_to_client": true
+  },
+  "maafw": {
+    "enabled": true,
+    "lib_dir": "C:\\Code\\MaaDDT\\deps\\bin",
+    "resource_dir": "C:\\Code\\MaaDDT\\asset\\resource"
+  },
+  "server": {
+    "host": "localhost",
+    "port": 9066
+  }
+}
