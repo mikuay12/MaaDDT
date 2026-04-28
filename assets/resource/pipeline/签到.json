@@ -1,0 +1,90 @@
+{
+    "$__mpe_config_签到": {
+        "$__mpe_code": {
+            "prefix": "",
+            "filePath": "C:\\Users\\Rinne\\Desktop\\MaaDDT\\assets\\resource\\pipeline\\签到.json",
+            "lastSyncTime": 1777363057877,
+            "isDeleted": true,
+            "savedViewport": {
+                "x": -503,
+                "y": 170,
+                "zoom": 0.75
+            },
+            "filename": "签到",
+            "version": "v1.4.3"
+        }
+    },
+    "签到_打开签到页": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "签到-图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "签到_点击领取",
+            "[JumpBack]签到_点开日常"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1595,
+                "y": 136
+            }
+        }
+    },
+    "签到_点开日常": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    566,
+                    38,
+                    530,
+                    192
+                ],
+                "template": [
+                    "图标_日常.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "next": [
+            "签到_打开签到页",
+            "[JumpBack]签到_点开日常"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1328,
+                "y": 114
+            }
+        }
+    },
+    "签到_点击领取": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "签到-签到.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 1852,
+                "y": 130
+            }
+        }
+    }
+}
