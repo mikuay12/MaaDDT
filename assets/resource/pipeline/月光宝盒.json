@@ -1,0 +1,288 @@
+{
+    "$__mpe_config_月光宝盒": {
+        "$__mpe_code": {
+            "prefix": "",
+            "filePath": "C:\\Code\\MaaDDT\\assets\\resource\\pipeline\\月光宝盒.json",
+            "lastSyncTime": 1777373002175,
+            "savedViewport": {
+                "x": -1290,
+                "y": 603,
+                "zoom": 1
+            },
+            "filename": "月光宝盒",
+            "version": "v1.4.3"
+        }
+    },
+    "月光宝盒_关闭": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "月光宝盒_关闭图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "月光宝盒_结束",
+            "月光宝盒_关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3619,
+                "y": -23
+            }
+        }
+    },
+    "月光宝盒_开启1次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "开启1次"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "月光宝盒_花点券识别",
+            "月光宝盒_奖励识别"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2651,
+                "y": -82
+            }
+        }
+    },
+    "月光宝盒_打开活动列表": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "活动图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    20,
+                    20,
+                    -10,
+                    -10
+                ]
+            }
+        },
+        "post_delay": 1000,
+        "next": [
+            "月光宝盒_点击活动图标",
+            "[JumpBack]月光宝盒_打开活动列表",
+            "[JumpBack]月光宝盒_跳过动画"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1744,
+                "y": -137
+            }
+        }
+    },
+    "月光宝盒_花点券识别": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    402,
+                    198,
+                    339,
+                    374
+                ],
+                "expected": [
+                    "绑定点券"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    173,
+                    -229,
+                    -34,
+                    6
+                ]
+            }
+        },
+        "next": [
+            "月光宝盒_花点券识别",
+            "月光宝盒_关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3079,
+                "y": 128
+            }
+        }
+    },
+    "月光宝盒_奖励识别": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "月光宝盒_奖励.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "next": [
+            "月光宝盒_奖励确认"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3075,
+                "y": -153
+            }
+        }
+    },
+    "月光宝盒_点击活动图标": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "月光宝盒活动图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    20,
+                    20,
+                    -10,
+                    -10
+                ]
+            }
+        },
+        "next": [
+            "月光宝盒_跳过动画",
+            "[JumpBack]月光宝盒_打开活动列表"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2012,
+                "y": -119
+            }
+        }
+    },
+    "月光宝盒_结束": {
+        "action": {
+            "type": "StopTask"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3945,
+                "y": 10
+            }
+        }
+    },
+    "月光宝盒_跳过动画": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "跳过动画"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -23,
+                    3,
+                    -59,
+                    -6
+                ]
+            }
+        },
+        "next": [
+            "月光宝盒_识别次数",
+            "月光宝盒_开启1次"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2297,
+                "y": -96
+            }
+        }
+    },
+    "月光宝盒_奖励确认": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "月光宝盒_奖励识别",
+            "月光宝盒_识别次数",
+            "月光宝盒_开启1次"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3330,
+                "y": -149
+            }
+        }
+    },
+    "月光宝盒_识别次数": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    764,
+                    161,
+                    65,
+                    66
+                ],
+                "template": [
+                    "月光宝盒_次数标识.png"
+                ],
+                "threshold": [
+                    0.9
+                ]
+            }
+        },
+        "next": [
+            "月光宝盒_关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2672,
+                "y": 107
+            }
+        }
+    },
+    "月光宝盒": {
+        "next": [
+            "月光宝盒_打开活动列表"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1441,
+                "y": -73
+            }
+        }
+    }
+}

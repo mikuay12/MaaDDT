@@ -1,6 +1,7 @@
 # 自定义
 ./config.json
 ./assets/resource/pipeline/config.json
+./nicegui/
 
 
 # docs

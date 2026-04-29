@@ -1,17 +1,14 @@
 {
-    "$__mpe_config_新建Pipeline2": {
+    "$__mpe_config_合成宝珠": {
         "$__mpe_code": {
             "prefix": "",
-            "lastSyncTime": 1777173901734,
-            "isModifiedExternally": false,
-            "filePath": "C:\\Code\\PythonProject\\MaaDDT\\assets\\resource\\pipeline\\my_task.json",
             "savedViewport": {
-                "x": 1416,
-                "y": 585,
-                "zoom": 0.63
+                "x": 1912,
+                "y": 338,
+                "zoom": 1
             },
-            "filename": "新建Pipeline2",
-            "version": "v1.4.2"
+            "filename": "合成宝珠",
+            "version": "v1.4.3"
         }
     },
     "下一页": {
@@ -425,7 +422,7 @@
             }
         }
     },
-    "$__mpe_external_开宝珠_打开背包_新建Pipeline2": {
+    "$__mpe_external_开宝珠_打开背包_合成宝珠": {
         "$__mpe_code": {
             "position": {
                 "x": 2909,
