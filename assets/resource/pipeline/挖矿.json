@@ -1,0 +1,285 @@
+{
+    "$__mpe_config_挖矿": {
+        "$__mpe_code": {
+            "prefix": "",
+            "filePath": "C:\\Code\\MaaDDT\\assets\\resource\\pipeline\\挖矿.json",
+            "lastSyncTime": 1777372819197,
+            "savedViewport": {
+                "x": -1055,
+                "y": 545,
+                "zoom": 1
+            },
+            "filename": "挖矿",
+            "version": "v1.4.3"
+        }
+    },
+    "挖矿_关闭": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "挖矿_关闭图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "挖矿_结束",
+            "挖矿_关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3619,
+                "y": -23
+            }
+        }
+    },
+    "挖矿_开启1次": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "开启1次"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "挖矿_花点券识别",
+            "挖矿_奖励识别"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2651,
+                "y": -82
+            }
+        }
+    },
+    "挖矿_打开活动列表": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "活动图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    20,
+                    20,
+                    -10,
+                    -10
+                ]
+            }
+        },
+        "post_delay": 1000,
+        "next": [
+            "挖矿_点击活动图标",
+            "挖矿_打开活动列表",
+            "挖矿_跳过动画"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1744,
+                "y": -137
+            }
+        }
+    },
+    "挖矿_花点券识别": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    402,
+                    198,
+                    339,
+                    374
+                ],
+                "expected": [
+                    "绑定点券"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    173,
+                    -229,
+                    -34,
+                    6
+                ]
+            }
+        },
+        "next": [
+            "挖矿_花点券识别",
+            "挖矿_关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3079,
+                "y": 128
+            }
+        }
+    },
+    "挖矿_奖励识别": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "挖矿_奖励.png"
+                ],
+                "green_mask": true
+            }
+        },
+        "next": [
+            "挖矿_奖励确认"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3075,
+                "y": -153
+            }
+        }
+    },
+    "挖矿_点击活动图标": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "挖矿活动图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    20,
+                    20,
+                    -10,
+                    -10
+                ]
+            }
+        },
+        "next": [
+            "挖矿_跳过动画",
+            "挖矿_打开活动列表"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2020,
+                "y": -117
+            }
+        }
+    },
+    "挖矿_结束": {
+        "action": {
+            "type": "StopTask"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 3945,
+                "y": 10
+            }
+        }
+    },
+    "挖矿_跳过动画": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "跳过动画"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -23,
+                    3,
+                    -59,
+                    -6
+                ]
+            }
+        },
+        "next": [
+            "挖矿_识别次数",
+            "挖矿_开启1次"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2297,
+                "y": -96
+            }
+        }
+    },
+    "挖矿_奖励确认": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "挖矿_奖励识别",
+            "挖矿_识别次数",
+            "挖矿_开启1次"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3330,
+                "y": -149
+            }
+        }
+    },
+    "挖矿_识别次数": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    764,
+                    161,
+                    65,
+                    66
+                ],
+                "expected": [
+                    "0"
+                ]
+            }
+        },
+        "next": [
+            "挖矿_关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2672,
+                "y": 107
+            }
+        }
+    },
+    "挖矿": {
+        "next": [
+            "挖矿_打开活动列表"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1441,
+                "y": -73
+            }
+        }
+    }
+}
