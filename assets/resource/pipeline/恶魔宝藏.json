@@ -3,9 +3,9 @@
         "$__mpe_code": {
             "prefix": "",
             "savedViewport": {
-                "x": -1444,
-                "y": 551,
-                "zoom": 0.76
+                "x": -1475,
+                "y": 506,
+                "zoom": 1
             },
             "filename": "恶魔宝藏",
             "version": "v1.4.3"
@@ -54,9 +54,10 @@
         "action": {
             "type": "Click"
         },
+        "post_delay": 1000,
         "next": [
-            "[JumpBack]恶魔宝藏_点击免费获取",
             "恶魔宝藏_点击取消",
+            "[JumpBack]恶魔宝藏_点击免费获取",
             "恶魔宝藏_连续探险"
         ],
         "$__mpe_code": {
@@ -91,8 +92,8 @@
         ],
         "$__mpe_code": {
             "position": {
-                "x": 2891,
-                "y": 55
+                "x": 2888,
+                "y": -19
             }
         }
     },
@@ -165,44 +166,21 @@
             "type": "Click"
         },
         "next": [
-            "恶魔宝藏_确认是否关闭",
-            "恶魔宝藏_结束"
-        ],
-        "$__mpe_code": {
-            "position": {
-                "x": 3729,
-                "y": -157
-            }
-        }
-    },
-    "恶魔宝藏_确认是否关闭": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "关闭按钮.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click"
-        },
-        "next": [
             "[JumpBack]恶魔宝藏_关闭",
             "恶魔宝藏_结束"
         ],
         "$__mpe_code": {
             "position": {
-                "x": 3995,
-                "y": -160
+                "x": 3725,
+                "y": -154
             }
         }
     },
     "恶魔宝藏_结束": {
         "$__mpe_code": {
             "position": {
-                "x": 4041,
-                "y": 107
+                "x": 4023,
+                "y": -123
             }
         }
     },
