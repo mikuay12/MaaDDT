@@ -1,0 +1,167 @@
+{
+    "$__mpe_config_寻宝接管邪神": {
+        "$__mpe_code": {
+            "prefix": "",
+            "filePath": "C:\\Code\\MaaDDT\\assets\\resource\\pipeline\\寻宝接管邪神.json",
+            "lastSyncTime": 1778062116808,
+            "isModifiedExternally": false,
+            "savedViewport": {
+                "x": -2496,
+                "y": 649,
+                "zoom": 1.14
+            },
+            "filename": "寻宝接管邪神",
+            "version": "v1.5.2"
+        }
+    },
+    "寻宝邪神": {
+        "next": [
+            "寻宝邪神_识别turn"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2554,
+                "y": -222
+            }
+        }
+    },
+    "寻宝邪神_e": {
+        "action": {
+            "type": "ClickKey",
+            "param": {
+                "key": [
+                    69
+                ]
+            }
+        },
+        "post_delay": 300,
+        "next": [
+            "寻宝邪神_b"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3083,
+                "y": -250
+            }
+        }
+    },
+    "寻宝邪神_识别turn": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "PASS"
+                ]
+            }
+        },
+        "timeout": 40000,
+        "next": [
+            "寻宝邪神_e",
+            "[JumpBack]寻宝邪神_识别turn"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2827,
+                "y": -239
+            }
+        }
+    },
+    "寻宝邪神_b": {
+        "action": {
+            "type": "ClickKey",
+            "param": {
+                "key": [
+                    66
+                ]
+            }
+        },
+        "post_delay": 300,
+        "next": [
+            "寻宝邪神_1"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3335,
+                "y": -251
+            }
+        }
+    },
+    "寻宝邪神_1": {
+        "action": {
+            "type": "ClickKey",
+            "param": {
+                "key": [
+                    49
+                ]
+            }
+        },
+        "post_delay": 300,
+        "next": [
+            "寻宝邪神_2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3585,
+                "y": -247
+            }
+        }
+    },
+    "寻宝邪神_2": {
+        "action": {
+            "type": "ClickKey",
+            "param": {
+                "key": [
+                    50
+                ]
+            }
+        },
+        "post_delay": 300,
+        "next": [
+            "寻宝邪神_4"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3838,
+                "y": -247
+            }
+        }
+    },
+    "寻宝邪神_4": {
+        "action": {
+            "type": "ClickKey",
+            "param": {
+                "key": [
+                    52
+                ]
+            }
+        },
+        "post_delay": 300,
+        "next": [
+            "寻宝邪神_按空格"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4088,
+                "y": -248
+            }
+        }
+    },
+    "寻宝邪神_按空格": {
+        "action": {
+            "type": "LongPressKey",
+            "param": {
+                "duration": 1800,
+                "key": 32
+            }
+        },
+        "next": [
+            "寻宝邪神_识别turn"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4339,
+                "y": -240
+            }
+        }
+    }
+}

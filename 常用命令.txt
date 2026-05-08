@@ -1,2 +1,3 @@
 python -m MaaDebugger
 mpelb
+conda activate wifi
