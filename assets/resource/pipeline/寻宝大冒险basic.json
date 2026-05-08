@@ -1,0 +1,152 @@
+{
+    "$__mpe_config_寻宝大冒险basic": {
+        "$__mpe_code": {
+            "filename": "寻宝大冒险basic",
+            "prefix": "",
+            "savedViewport": {
+                "x": -2642,
+                "y": 166,
+                "zoom": 0.87
+            },
+            "version": "v1.4.3"
+        }
+    },
+    "寻宝大冒险": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2547,
+                "y": -49
+            }
+        },
+        "next": [
+            "寻宝大冒险_点开日常列表"
+        ]
+    },
+    "寻宝大冒险_取消点券开启": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3856,
+                "y": -116
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "寻宝大冒险_领奖"
+        ],
+        "recognition": {
+            "param": {
+                "expected": [
+                    "取消"
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "寻宝大冒险_点击进入": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3060,
+                "y": -78
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "寻宝大冒险_选择邪神"
+        ],
+        "recognition": {
+            "param": {
+                "template": [
+                    "寻宝大冒险图标.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "寻宝大冒险_点开日常列表": {
+        "$__mpe_code": {
+            "position": {
+                "x": 2805,
+                "y": -82
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "寻宝大冒险_点击进入"
+        ],
+        "recognition": {
+            "param": {
+                "template": [
+                    "战斗图标.png"
+                ]
+            },
+            "type": "TemplateMatch"
+        }
+    },
+    "寻宝大冒险_选择邪神": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3314,
+                "y": -71
+            }
+        },
+        "action": {
+            "param": {
+                "target_offset": [
+                    -86,
+                    63,
+                    5,
+                    -42
+                ]
+            },
+            "type": "Click"
+        },
+        "next": [
+            "寻宝大冒险_领奖"
+        ],
+        "recognition": {
+            "param": {
+                "expected": [
+                    "邪神部落"
+                ]
+            },
+            "type": "OCR"
+        }
+    },
+    "寻宝大冒险_领奖": {
+        "$__mpe_code": {
+            "position": {
+                "x": 3576,
+                "y": -90
+            }
+        },
+        "action": {
+            "param": {
+                "target_offset": [
+                    -130,
+                    -208,
+                    -41,
+                    9
+                ]
+            },
+            "type": "Click"
+        },
+        "next": [
+            "寻宝大冒险_取消点券开启"
+        ],
+        "post_delay": 1000,
+        "recognition": {
+            "param": {
+                "expected": [
+                    "跳过战斗"
+                ]
+            },
+            "type": "OCR"
+        }
+    }
+}
