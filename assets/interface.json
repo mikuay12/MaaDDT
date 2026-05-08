@@ -2,11 +2,11 @@
     "interface_version": 2,
     "name": "MaaDDT",
     "description": "这是一个使用 MaaFramework 创建的新项目。正在开发中。。。",
-    "contact": "QQ群: 123456789",
-    "license": "MIT",
-    "welcome": "首次使用！欢迎使用 MAADDT!",
+    "contact": "./contact.md",
+    "license": "AGPL",
+    "welcome": "./welcome.md",
     "github": "https://github.com/mikuay12/MaaDDT",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "controller": [
         {
             "name": "桌面端",
@@ -22,7 +22,7 @@
     ],
     "resource": [
         {
-            "name": "官服",
+            "name": "黑暗登录器",
             "path": [
                 "./resource"
             ]
@@ -30,12 +30,54 @@
     ],
     "task": [
         {
-            "name": "合成宝珠",
-            "entry": "合成宝珠_打开背包"
+            "name": "自动开、合成宝珠",
+            "entry": "循环开宝珠并合成",
+            "description":"在大厅启动，不要打开任何界面"
         },
         {
-            "name": "开宝珠",
-            "entry": "开宝珠_打开背包"
+            "name": "吉祥物日常",
+            "entry": "吉祥物日常",
+            "description":"在大厅启动，不要打开任何界面"
+        },
+        {
+            "name": "公会日常任务托管",
+            "entry": "团任务托管",
+            "description":"在大厅启动，不要打开任何界面"
+        },
+        {
+            "name": "战斗接管",
+            "entry": "寻宝邪神",
+            "description":"很基础的功能，按eb124后以当前角度大概50力发射"
+        },
+        {
+            "name": "庄园扭蛋",
+            "entry": "庄园日常",
+            "description":"在大厅启动，不要打开任何界面"
+        },
+        {
+            "name": "月光宝盒日常",
+            "entry": "月光宝盒",
+            "description":"在大厅启动，不要打开任何界面"
+        },
+        {
+            "name": "秘境扫荡",
+            "entry": "秘境扫荡",
+            "description":"扫荡秘境，小心炸级哦"
+        },
+        {
+            "name": "签到",
+            "entry": "签到_点开日常",
+            "description":"在大厅启动，不要打开任何界面"
+        },
+        {
+            "name": "开启公会技能领任务",
+            "entry": "开启公会技能",
+            "description":"在大厅启动，不要打开任何界面"
+        },
+        {
+            "name": "恶魔宝藏用免费次数",
+            "entry": "恶魔宝藏_打开活动列表",
+            "description":"还在开发中，可能不稳定"
         }
     ]
 }
