@@ -1,0 +1,404 @@
+{
+    "$__mpe_config_开启公会技能": {
+        "$__mpe_code": {
+            "prefix": "",
+            "filePath": "C:\\Users\\Rinne\\Desktop\\MaaDDT\\assets\\resource\\pipeline\\开启公会技能.json",
+            "lastSyncTime": 1778230928644,
+            "savedViewport": {
+                "x": -5227,
+                "y": 371,
+                "zoom": 0.86
+            },
+            "filename": "开启公会技能",
+            "version": "v1.5.2"
+        }
+    },
+    "开启公会技能": {
+        "next": [
+            "开启公会技能_点击社交"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2836,
+                "y": -226
+            }
+        }
+    },
+    "开启公会技能_点击社交": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    876,
+                    63,
+                    46,
+                    37
+                ]
+            }
+        },
+        "post_delay": 1000,
+        "next": [
+            "开启公会技能_点击公会",
+            "开启公会技能_点击社交"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3091,
+                "y": -242
+            }
+        }
+    },
+    "开启公会技能_点击公会": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "公会图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "timeout": 10000,
+        "on_error": [
+            "开启公会技能_点击社交"
+        ],
+        "next": [
+            "开启公会技能_确认打开公会"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3348,
+                "y": -241
+            }
+        }
+    },
+    "开启公会技能_进入领地": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    721,
+                    504,
+                    59,
+                    50
+                ]
+            }
+        },
+        "next": [
+            "开启公会技能_确认进入领地",
+            "开启公会技能_进入领地"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3888,
+                "y": -210
+            }
+        }
+    },
+    "开启公会技能_确认进入领地": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开启公会技能_进入领地校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4139,
+                "y": -211
+            }
+        }
+    },
+    "开启公会技能_打开技能页": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    137,
+                    96,
+                    39,
+                    14
+                ]
+            }
+        },
+        "next": [
+            "开启公会技能_点击个人技能"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4699,
+                "y": -211
+            }
+        }
+    },
+    "开启公会技能_选择任务": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    437,
+                    585,
+                    91,
+                    38
+                ]
+            }
+        },
+        "next": [
+            "开启公会技能_开启技能确认"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5194,
+                "y": -221
+            }
+        }
+    },
+    "开启公会技能_开启技能确认": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开启公会技能_关闭技能页"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5443,
+                "y": -222
+            }
+        }
+    },
+    "开启公会技能_关闭技能页": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    869,
+                    75,
+                    30,
+                    20
+                ]
+            }
+        },
+        "next": [
+            "开启公会技能_退出公会领地"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5689,
+                "y": -225
+            }
+        }
+    },
+    "开启公会技能_退出公会领地": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1088,
+                    669,
+                    49,
+                    43
+                ]
+            }
+        },
+        "next": [
+            "开启公会技能_退出领地确认",
+            "开启公会技能_退出公会领地"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5927,
+                "y": -226
+            }
+        }
+    },
+    "开启公会技能_退出领地确认": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "next": [
+            "开启公会技能_打开任务界面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6179,
+                "y": -246
+            }
+        }
+    },
+    "开启公会技能_确认打开公会": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "设施管理"
+                ]
+            }
+        },
+        "next": [
+            "开启公会技能_进入领地"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3619,
+                "y": -210
+            }
+        }
+    },
+    "开启公会技能_进入领地校验": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "远征之门"
+                ]
+            }
+        },
+        "next": [
+            "开启公会技能_打开技能页"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4420,
+                "y": -213
+            }
+        }
+    },
+    "开启公会技能_点击个人技能": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "个人技能"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开启公会技能_选择任务"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4955,
+                "y": -214
+            }
+        }
+    },
+    "开启公会技能_打开任务界面": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    969,
+                    656,
+                    33,
+                    52
+                ]
+            }
+        },
+        "post_delay": 1000,
+        "next": [
+            "开启公会技能_点击日常任务"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6438,
+                "y": -249
+            }
+        }
+    },
+    "开启公会技能_点击日常任务": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "日常任务"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开启公会技能_领取奖励",
+            "开启公会技能_关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6698,
+                "y": -251
+            }
+        }
+    },
+    "开启公会技能_领取奖励": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "领取奖励"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "next": [
+            "开启公会技能_领取奖励"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6970,
+                "y": -298
+            }
+        }
+    },
+    "开启公会技能_关闭": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    977,
+                    69,
+                    37,
+                    23
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 6966,
+                "y": -72
+            }
+        }
+    }
+}
