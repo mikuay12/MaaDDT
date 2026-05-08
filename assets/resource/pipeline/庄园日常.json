@@ -1,0 +1,186 @@
+{
+    "$__mpe_config_庄园日常": {
+        "$__mpe_code": {
+            "prefix": "",
+            "filePath": "C:\\Code\\MaaDDT\\assets\\resource\\pipeline\\庄园日常.json",
+            "lastSyncTime": 1778244231037,
+            "savedViewport": {
+                "x": -4210,
+                "y": 547,
+                "zoom": 0.87
+            },
+            "filename": "庄园日常",
+            "version": "v1.5.2"
+        }
+    },
+    "庄园日常": {
+        "next": [
+            "庄园日常_点击日常"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4925,
+                "y": -161
+            }
+        }
+    },
+    "庄园日常_点击日常": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "图标_日常.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "庄园日常_点击庄园"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5192,
+                "y": -190
+            }
+        }
+    },
+    "庄园日常_点击庄园": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "庄园图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 3000,
+        "next": [
+            "庄园日常_进入扭蛋"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5459,
+                "y": -205
+            }
+        }
+    },
+    "庄园日常_进入扭蛋": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "庄园大总管"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    24,
+                    -69,
+                    -31,
+                    1
+                ]
+            }
+        },
+        "next": [
+            "庄园日常_十连扭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5729,
+                "y": -171
+            }
+        }
+    },
+    "庄园日常_十连扭": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "十连扭"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 2000,
+        "next": [
+            "庄园日常_关闭扭蛋机"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5987,
+                "y": -160
+            }
+        }
+    },
+    "庄园日常_关闭扭蛋机": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1019,
+                    70,
+                    33,
+                    22
+                ]
+            }
+        },
+        "next": [
+            "庄园日常_关闭校验",
+            "庄园日常_关闭扭蛋机"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6250,
+                "y": -162
+            }
+        }
+    },
+    "庄园日常_关闭校验": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "庄园大总管"
+                ]
+            }
+        },
+        "next": [
+            "庄园日常_退出"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6499,
+                "y": -165
+            }
+        }
+    },
+    "庄园日常_退出": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1081,
+                    659,
+                    29,
+                    43
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 6758,
+                "y": -167
+            }
+        }
+    }
+}

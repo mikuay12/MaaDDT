@@ -1,0 +1,308 @@
+{
+    "$__mpe_config_吉祥物日常": {
+        "$__mpe_code": {
+            "prefix": "",
+            "filePath": "C:\\Code\\MaaDDT\\assets\\resource\\pipeline\\吉祥物日常.json",
+            "lastSyncTime": 1778243280477,
+            "savedViewport": {
+                "x": -3646,
+                "y": 522,
+                "zoom": 0.87
+            },
+            "filename": "吉祥物日常",
+            "version": "v1.5.2"
+        }
+    },
+    "吉祥物日常": {
+        "next": [
+            "吉祥物日常_点击日常"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4829,
+                "y": -176
+            }
+        }
+    },
+    "吉祥物日常_点击日常": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "图标_日常.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "吉祥物日常_点击吉祥物图标",
+            "吉祥物日常_点击日常"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5087,
+                "y": -204
+            }
+        }
+    },
+    "吉祥物日常_点击吉祥物图标": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "吉祥物图标.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "吉祥物日常_点击运动",
+            "吉祥物日常_点击日常"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5341,
+                "y": -208
+            }
+        }
+    },
+    "吉祥物日常_点击运动": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "运动"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "吉祥物日常_查看收成",
+            "吉祥物日常_正在运动",
+            "吉祥物日常_选择战斗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5597,
+                "y": -188
+            }
+        }
+    },
+    "吉祥物日常_查看收成": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "已完成"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "吉祥物日常_选择战斗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5854,
+                "y": -187
+            }
+        }
+    },
+    "吉祥物日常_点击家务": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "家务"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "吉祥物日常_家务校验",
+            "吉祥物日常_点击家务"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6637,
+                "y": -188
+            }
+        }
+    },
+    "吉祥物日常_安排仙池": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    866,
+                    300,
+                    70,
+                    26
+                ]
+            }
+        },
+        "next": [
+            "吉祥物日常_安排藏宝图"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7192,
+                "y": -187
+            }
+        }
+    },
+    "吉祥物日常_安排藏宝图": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    864,
+                    417,
+                    75,
+                    29
+                ]
+            }
+        },
+        "next": [
+            "吉祥物日常_安排校验",
+            "吉祥物日常_安排仙池"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7461,
+                "y": -191
+            }
+        }
+    },
+    "吉祥物日常_家务校验": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "安排"
+                ]
+            }
+        },
+        "next": [
+            "吉祥物日常_安排仙池"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6916,
+                "y": -187
+            }
+        }
+    },
+    "吉祥物日常_选择战斗": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "战斗鸡"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "吉祥物日常_运动确认",
+            "吉祥物日常_选择战斗"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6102,
+                "y": -189
+            }
+        }
+    },
+    "吉祥物日常_运动确认": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "吉祥物日常_点击家务"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6363,
+                "y": -187
+            }
+        }
+    },
+    "吉祥物日常_关闭": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1000,
+                    143,
+                    28,
+                    29
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 7991,
+                "y": -183
+            }
+        }
+    },
+    "吉祥物日常_安排校验": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "已安排"
+                ]
+            }
+        },
+        "next": [
+            "吉祥物日常_关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 7728,
+                "y": -186
+            }
+        }
+    },
+    "吉祥物日常_正在运动": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "进行中"
+                ]
+            }
+        },
+        "next": [
+            "吉祥物日常_点击家务"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5857,
+                "y": -20
+            }
+        }
+    }
+}

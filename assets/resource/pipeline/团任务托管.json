@@ -1,0 +1,265 @@
+{
+    "$__mpe_config_团任务托管": {
+        "$__mpe_code": {
+            "prefix": "",
+            "filePath": "C:\\Code\\MaaDDT\\assets\\resource\\pipeline\\团任务托管.json",
+            "lastSyncTime": 1778235858305,
+            "savedViewport": {
+                "x": -5639,
+                "y": 622,
+                "zoom": 1.32
+            },
+            "filename": "团任务托管",
+            "version": "v1.5.2"
+        }
+    },
+    "团任务托管_点开任务": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    966,
+                    661,
+                    34,
+                    32
+                ]
+            }
+        },
+        "next": [
+            "团任务托管_选择日常",
+            "团任务托管_点开任务"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3777,
+                "y": -236
+            }
+        }
+    },
+    "团任务托管_选择日常": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "日常任务"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "timeout": 3000,
+        "next": [
+            "团任务托管_选择任务"
+        ],
+        "on_error": [
+            "团任务托管_关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4026,
+                "y": -237
+            }
+        }
+    },
+    "团任务托管_选择任务": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "团队的荣誉"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "团任务托管_开始托管",
+            "团任务托管_已经托管"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4279,
+                "y": -256
+            }
+        }
+    },
+    "团任务托管_开始托管": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "开始托管"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "团任务托管_托管失败",
+            "团任务托管_确认",
+            "团任务托管_精力药水确认"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4561,
+                "y": -235
+            }
+        }
+    },
+    "团任务托管_精力药水确认": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "是否使用精力药水"
+                ]
+            }
+        },
+        "next": [
+            "团任务托管_确认使用"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4820,
+                "y": -96
+            }
+        }
+    },
+    "团任务托管_确认": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "团任务托管_校验"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4817,
+                "y": -309
+            }
+        }
+    },
+    "团任务托管_确认使用": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "确定"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "团任务托管_开始托管"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5069,
+                "y": -90
+            }
+        }
+    },
+    "团任务托管_托管失败": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "托管失败"
+                ]
+            }
+        },
+        "next": [
+            "团任务托管_关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4823,
+                "y": 84
+            }
+        }
+    },
+    "团任务托管": {
+        "next": [
+            "团任务托管_点开任务"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3529,
+                "y": -227
+            }
+        }
+    },
+    "团任务托管_校验": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "正在托管中"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "团任务托管_关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5088,
+                "y": -253
+            }
+        }
+    },
+    "团任务托管_关闭": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    980,
+                    70,
+                    29,
+                    24
+                ]
+            }
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 5625,
+                "y": -114
+            }
+        }
+    },
+    "团任务托管_已经托管": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "取消托管"
+                ]
+            }
+        },
+        "next": [
+            "团任务托管_关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4558,
+                "y": -429
+            }
+        }
+    }
+}

@@ -1,0 +1,684 @@
+{
+    "$__mpe_config_循环开宝珠并合成": {
+        "$__mpe_code": {
+            "prefix": "",
+            "lastSyncTime": 1778248518690,
+            "isModifiedExternally": false,
+            "filePath": "C:\\Code\\MaaDDT\\assets\\resource\\pipeline\\循环开宝珠并合成.json",
+            "savedViewport": {
+                "x": -177,
+                "y": 223,
+                "zoom": 1
+            },
+            "filename": "循环开宝珠并合成",
+            "version": "v1.5.2"
+        }
+    },
+    "开宝珠_全部拾取": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "全部拾取"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "repeat": 5,
+        "repeat_delay": 10000,
+        "next": [
+            "开宝珠_关闭",
+            "开宝珠_全部拾取"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3064,
+                "y": 196
+            }
+        }
+    },
+    "开宝珠_关闭": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "关闭按钮.png"
+                ],
+                "threshold": [
+                    0.85
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开宝珠_确认关闭",
+            "开宝珠_关闭"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3325,
+                "y": 197
+            }
+        }
+    },
+    "开宝珠_勾选跳过动画": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "跳过动画"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开宝珠_检查连续开启",
+            "开宝珠_开启"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2261,
+                "y": 217
+            }
+        }
+    },
+    "开宝珠_开启": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "宝珠开启按钮.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开宝珠_全部拾取"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2785,
+                "y": 211
+            }
+        }
+    },
+    "开宝珠_打开背包": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    660,
+                    582,
+                    157,
+                    132
+                ],
+                "template": [
+                    "背包.png"
+                ],
+                "threshold": [
+                    0.4
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开宝珠_确认在背包",
+            "开宝珠_打开背包",
+            "[JumpBack]开宝珠_背包道具"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 919,
+                "y": 181
+            }
+        }
+    },
+    "开宝珠_检查连续开启": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "开宝珠_连续开启.png"
+                ],
+                "threshold": [
+                    0.8
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开宝珠_开启"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2520,
+                "y": 201
+            }
+        }
+    },
+    "开宝珠_点击宝珠": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "道具_宝珠.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 1000,
+        "next": [
+            "开宝珠_点击打开",
+            "开宝珠_勾选跳过动画",
+            "开宝珠_背包道具"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1741,
+                "y": 195
+            }
+        }
+    },
+    "开宝珠_点击打开": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "道具打开.png"
+                ],
+                "threshold": [
+                    0.7
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开宝珠_勾选跳过动画",
+            "开宝珠_点击宝珠"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 2002,
+                "y": 213
+            }
+        }
+    },
+    "开宝珠_确认关闭": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "放入背包"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "切换宝珠页面"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3594,
+                "y": 226
+            }
+        }
+    },
+    "开宝珠_确认在背包": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "背包铁匠铺图标.png"
+                ]
+            }
+        },
+        "next": [
+            "[JumpBack]开宝珠_背包道具",
+            "开宝珠_打开背包"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1196,
+                "y": 219
+            }
+        }
+    },
+    "循环开宝珠并合成": {
+        "next": [
+            "开宝珠_打开背包",
+            "[JumpBack]开宝珠_背包道具"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 641,
+                "y": 231
+            }
+        }
+    },
+    "开宝珠_背包道具": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "背包道具.png",
+                    "背包道具2.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "开宝珠_点击宝珠",
+            "开宝珠_背包道具"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 1476,
+                "y": 205
+            }
+        }
+    },
+    "宝珠背包_点击下一页": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    866,
+                    561,
+                    32,
+                    18
+                ]
+            }
+        },
+        "next": [
+            "批量合成"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6592,
+                "y": 379
+            }
+        }
+    },
+    "勾选跳过": {
+        "max_hit": 1,
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "跳过动画"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    -14,
+                    8,
+                    -54,
+                    -13
+                ]
+            }
+        },
+        "next": [
+            "批量合成"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5270,
+                "y": 232
+            }
+        }
+    },
+    "合成宝珠_点击整理": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "整理"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "拿宝珠",
+            "宝珠合成_切回资料"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4154,
+                "y": 228
+            }
+        }
+    },
+    "确定合成宝珠2": {
+        "action": {
+            "type": "ClickKey",
+            "param": {
+                "key": [
+                    13
+                ]
+            }
+        },
+        "post_delay": 2000,
+        "next": [
+            "宝珠背包_点击下一页"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6702,
+                "y": 635
+            }
+        }
+    },
+    "宝珠_确认宝珠放好": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "宝珠放好.png"
+                ],
+                "threshold": [
+                    0.5
+                ]
+            }
+        },
+        "next": [
+            "勾选跳过",
+            "批量合成"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5001,
+                "y": 210
+            }
+        }
+    },
+    "宝珠_输入YES": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "YES输入框.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "InputText",
+            "param": {
+                "input_text": "YES"
+            }
+        },
+        "next": [
+            "吞噬宝珠_确定"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6188,
+                "y": 633
+            }
+        }
+    },
+    "宝珠合成_YES": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "YES输入框.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target_offset": [
+                    20,
+                    8,
+                    -100,
+                    -15
+                ]
+            }
+        },
+        "next": [
+            "宝珠_输入YES"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5928,
+                "y": 631
+            }
+        }
+    },
+    "宝珠合成_切回资料": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "资料"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "$__mpe_code": {
+            "position": {
+                "x": 7248,
+                "y": 70
+            }
+        }
+    },
+    "宝珠合成_已达最高等级": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "不可再升级"
+                ]
+            }
+        },
+        "next": [
+            "宝珠合成_切回资料"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5925,
+                "y": 160
+            }
+        }
+    },
+    "切换宝珠页面": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "宝珠"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "合成宝珠_点击整理"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 3879,
+                "y": 227
+            }
+        }
+    },
+    "批量合成": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "批量合成"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "没有可合成的宝珠",
+            "宝珠合成_已达最高等级",
+            "确定合成宝珠",
+            "宝珠合成_YES",
+            "批量合成"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5549,
+                "y": 243
+            }
+        }
+    },
+    "拿宝珠": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "敏捷宝珠Lv9.png"
+                ],
+                "threshold": [
+                    0.6
+                ]
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "next": [
+            "放宝珠"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4457,
+                "y": 204
+            }
+        }
+    },
+    "放宝珠": {
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    490,
+                    298,
+                    59,
+                    61
+                ]
+            }
+        },
+        "post_delay": 1000,
+        "next": [
+            "宝珠_确认宝珠放好",
+            "拿宝珠"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 4731,
+                "y": 217
+            }
+        }
+    },
+    "没有可合成的宝珠": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "没有可合成的宝珠"
+                ]
+            }
+        },
+        "next": [
+            "宝珠合成_切回资料"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5927,
+                "y": -36
+            }
+        }
+    },
+    "吞噬宝珠_确定": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "YES"
+                ]
+            }
+        },
+        "action": {
+            "type": "ClickKey",
+            "param": {
+                "key": [
+                    13
+                ]
+            }
+        },
+        "next": [
+            "确定合成宝珠2"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 6450,
+                "y": 644
+            }
+        }
+    },
+    "确定合成宝珠": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "确定合成"
+                ]
+            }
+        },
+        "action": {
+            "type": "ClickKey",
+            "param": {
+                "key": [
+                    13
+                ]
+            }
+        },
+        "post_delay": 1000,
+        "next": [
+            "宝珠合成_YES",
+            "宝珠背包_点击下一页"
+        ],
+        "$__mpe_code": {
+            "position": {
+                "x": 5928,
+                "y": 363
+            }
+        }
+    }
+}
